@@ -4,6 +4,17 @@ import { ShoppingListComponent } from './shopping-list.component';
 @Component({
     selector: 'app',
     template: `
+
+    <div class="media">
+     <img class="media__figure image" src="./dist/images/the-grapes-of-wrath.jpg" alt="Kitten">
+     <div class="media__body">
+       <h3 class="media__title">The Grapes of Wrath</h3>
+       <div class="media__subtitle">by John Steinbeck</div>
+       <p class="media__description">
+        An epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads.
+      </div>
+    </div>
+
 			<ul>
 				<li 
 					*ngFor="#shoppingListItem of shoppingListItems"
