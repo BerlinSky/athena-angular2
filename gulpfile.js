@@ -4,7 +4,6 @@ var assetsDev = 'assets/';
 var assetsProd = 'src/';
 
 var appDev = 'dev/';
-// var dist = 'dist/';
 var dist = 'dist/';
 
 /* CSS */
@@ -65,3 +64,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['watch', 'build-ts', 'bundle-ts', 'build-css']);
+
+

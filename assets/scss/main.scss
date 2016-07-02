@@ -1,6 +1,24 @@
-body {
-  padding: 32px;
-  margin: 32px;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-}
+@import "base/all-base";
+@import "layout/all-layouts";
+@import "modules/all-modules";  
+
+// Test respondTo:
+
+// body {
+// 	@include respondTo(x-small) {
+// 		background-color: red;
+// 	}
+// 	@include respondTo(small) {
+// 		background-color: yellow;
+// 	}
+// 	@include respondTo(medium) {
+// 		background-color: green;
+// 	}
+// 	@include respondTo(large) {
+// 		background-color: orange;
+// 	}
+// 	@include respondTo(x-large) {
+// 		background-color: purple;
+// 	}
+// }
+

@@ -1,30 +1,86 @@
 <!doctype>
 <html>
 <head>
-    <base href="/">
-    <title>Angular 2 Boilerplate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 1. Load libraries -->
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <base href="/">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <title>athena anular2</title>
 
-    <!-- 2. Configure SystemJS -->
-    <script src="systemjs.config.js"></script>
+  <meta charset="utf-8" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+  <!--Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="dist/styles/font-awesome.min.css">
 
-    <link rel="stylesheet" href="src/css/main.css">
+  <!-- 1. Load libraries -->
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
 
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script src="systemjs.config.js"></script>
+
+  <link rel="stylesheet" href="src/css/main.css">
 </head>
-<body>
-<app>Loading...</app>
 
-<script>
-    System.import('app').catch(function(err){ console.error(err);  });
-</script>
-<!--<script src="app/bundle.js"></script>-->
+<body>
+    <div class="l-siteContainer l-header-fixed l-footer-fixed siteContainer">
+
+    <navigation class="l-navigation navigation">
+      <h1 class="logo"><a href="#">Athena</a></h1>
+      <nav class="l-navlinks navlinks">
+      </nav>
+      <nav class="navActions">
+        <ul>
+          <li class="navActions__item navActions__item__search visble">
+            <a class="js-buttonSearchOpen fa-search" href="#search">Search</a>
+          </li>
+          <li class="navActions__item menu">
+            <a class="js-actionMenu fa-bars">Menu</a>
+          </li>
+        </ul>
+      </nav>
+    </navigation>
+
+    <section class="l-mainContent mainContent">
+      <div class="siteAttraction">
+        <div class="siteCover">
+         <h1 class="siteCover__caption">Bustling Daily Life in reading</h1>
+        </div>
+          <video  class="siteShow" src="dist/movies/In-And-Out.mp4" autoplay loop></video> 
+      </div>
+
+      <div class="panelContainer">
+        <app>Loading...</app>
+      </div>
+    </section>
+
+    <section class="searchContainer js-searchContainer">
+      <form class="searchForm">
+        <input class="searchForm__input" type="search" placeholder="Search..."/>
+        <button class="searchForm__submit js-buttonSearchSubmit" type="submit">Search</button>
+      </form>
+      <div class="searchContent">
+
+      </div>
+      <span class="searchClose js-buttonSearchClose"></span>
+    </section>
+
+    <footer class="l-footer footer">
+      <div class="copyright">&copy; Inspired by Athena</div>
+    </footer>
+
+  </div>
+
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+  <!--<script src="dist/bundle.js"></script>-->
+
 </body>
+
 </html>
