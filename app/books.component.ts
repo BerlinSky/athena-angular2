@@ -6,12 +6,22 @@ import { Component } from '@angular/core';
     <ul>
       <li *ngFor="let book of books">
         <h2>{{book.name | uppercase}}</h2>
-        <p>{{book.description}}</p>
-        <p>{{book.price | currency: 'EUR':true}}</p>
+        <p class="description">{{book.description}}</p>
+        <p class="price">{{book.price | currency: 'EUR':true}}</p>
         <p *ngIf="book.inStock > 0">{{book.inStock}} copies in stock</p>
         <p *ngIf="book.inStock === 0">Temporarily out of stock</p>
       </li>
-    </ul>`
+    </ul>`,
+    styles: [`
+      .description {
+        color: blue;
+        font-size: 18px;
+      }
+      .price {
+        font-weight: 700;
+        color: tomato;
+      }
+    `]
 })
 export class BooksComponent {
   title = "The Book Reading Life";
