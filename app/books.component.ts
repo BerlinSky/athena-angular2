@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'book-list',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class BooksComponent {
   title = "The Book Reading Life";
-  books = [{
+  books: Book[] = [{
       "id": 1,
       "name": "Why save the bankers?",
       "description": "The articles from a French economist",
