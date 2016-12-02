@@ -1,0 +1,9 @@
+.description {
+  color: blue;
+  font-size: 18px;
+}
+
+.price {
+  font-weight: 700;
+  color: green;
+}

@@ -2,26 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'book-list',
-  template: `<p>There are {{totalBooks()}} total books in stock</p>
-    <ul>
-      <li *ngFor="let book of books">
-        <h2>{{book.name | uppercase}}</h2>
-        <p class="description">{{book.description}}</p>
-        <p class="price">{{book.price | currency: 'EUR':true}}</p>
-        <p *ngIf="book.inStock > 0">{{book.inStock}} copies in stock</p>
-        <p *ngIf="book.inStock === 0">Temporarily out of stock</p>
-      </li>
-    </ul>`,
-    styles: [`
-      .description {
-        color: blue;
-        font-size: 18px;
-      }
-      .price {
-        font-weight: 700;
-        color: tomato;
-      }
-    `]
+  templateUrl: 'app/books.component.html',
+  styleUrls: ['app/books.component.css']
 })
 export class BooksComponent {
   title = "The Book Reading Life";
