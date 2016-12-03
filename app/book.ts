@@ -4,4 +4,6 @@ export class Book {
   description: string;
   inStock: number;
   price: number;
+  image: string;
+  onSale: boolean;
 }

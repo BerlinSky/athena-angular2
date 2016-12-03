@@ -7,3 +7,8 @@
   font-weight: 700;
   color: green;
 }
+
+.onSale {
+  background-color: green;
+  border: 1px solid tomato;
+}
