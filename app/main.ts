@@ -1,6 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { FormsModule } from "@angular/forms";
+
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books.component';
 
@@ -9,7 +11,7 @@ import { BooksComponent } from './books.component';
     AppComponent,
     BooksComponent
   ],
-  imports: [ BrowserModule ],
+  imports: [ BrowserModule, FormsModule ],
   bootstrap: [ AppComponent ]
 })
 class AppModule { }

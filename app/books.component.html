@@ -9,5 +9,18 @@
         <div>
           <img [src]="book.image">
         </div>
+        <div>
+          <p>{{book.quantity}}</p>
+        </div>
+        <div>
+          <button (click)="downQuantity(book)">Decrease</button>
+        </div>
+        <div>
+          <input type="text" name="" [value]="book.quantity"
+              (input)="book.quantity = $event.target.value">
+        </div>
+        <div>
+          <button (click)="upQuantity(book)">Increase</button>
+        </div>
     </li>
 </ul>

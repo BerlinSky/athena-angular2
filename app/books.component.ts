@@ -25,4 +25,16 @@ export class BooksComponent {
 
     return total;
   }
+
+  upQuantity(book:any) {
+    if (book.quantity < book.inStock) {
+      book.quantity++;
+    }
+  }
+
+  downQuantity(book:any) {
+    if (book.quantity > 0) {
+      book.quantity--;
+    }
+  }
 }

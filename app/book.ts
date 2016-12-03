@@ -6,4 +6,5 @@ export class Book {
   price: number;
   image: string;
   onSale: boolean;
+  quantity: number;
 }

@@ -7,7 +7,8 @@ export const BOOKS: Book[] = [{
     "price": 13.50,
     "inStock": 15,
     "image": "/images/wuthering-heights.jpg",
-    "onSale": true
+    "onSale": true,
+    "quantity": 0
   },
   {
     "id": 2,
@@ -16,7 +17,8 @@ export const BOOKS: Book[] = [{
     "price": 35.50,
     "inStock": 20,
     "image": "/images/middle-march.jpg",
-    "onSale": false
+    "onSale": false,
+    "quantity": 0
   },
   {
     "id": 3,
@@ -25,7 +27,8 @@ export const BOOKS: Book[] = [{
     "price": 29.35,
     "inStock": 0,
     "image": "/images/sense-and-sensibility.jpg",
-    "onSale": true
+    "onSale": true,
+    "quantity": 0
   },
   {
     "id": 4,
@@ -34,6 +37,7 @@ export const BOOKS: Book[] = [{
     "price": 20.95,
     "inStock": 27,
     "image": "/images/vanity-fair.jpg",
-    "onSale": false
+    "onSale": false,
+    "quantity": 0
   }
 ];
