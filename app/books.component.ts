@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from './book';
-import { BOOKS } from './mocks';
+// import { BOOKS } from './mocks';
+import { BookDataService } from './book-data.service';
 
 @Component({
   selector: 'book-list',
@@ -11,8 +12,12 @@ export class BooksComponent {
   title = "The Book Reading Life";
   books: Book[];
 
+   constructor(private bookDataService: BookDataService) { }
+
   ngOnInit() {
-    this.books = BOOKS;
+    // this.books = BOOKS;
+    // const bookDataService = new BookDataService();
+    this.books = this.bookDataService.getBookList();
   }
 
   totalBooks() {

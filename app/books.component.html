@@ -16,8 +16,7 @@
           <button (click)="downQuantity(book)">Decrease</button>
         </div>
         <div>
-          <input type="text" name="" [value]="book.quantity"
-              (input)="book.quantity = $event.target.value">
+          <input type="text" name="" [(ngModel)]="book.quantity">
         </div>
         <div>
           <button (click)="upQuantity(book)">Increase</button>
