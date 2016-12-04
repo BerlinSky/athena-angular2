@@ -15,17 +15,18 @@ export class BooksComponent {
    constructor(private bookDataService: BookDataService) { }
 
   ngOnInit() {
-    // this.books = BOOKS;
-    // const bookDataService = new BookDataService();
-    this.books = this.bookDataService.getBookList();
+    // this.books = this.bookDataService.getBookList();
+    this.bookDataService.getBookList().subscribe(books => this.books = books);
   }
 
   totalBooks() {
     // return 25;
     let total = 0;
 
-    for (let book of this.books) {
-      total += book.inStock;
+    if (Array.isArray(this.books)) {
+      for (let book of this.books) {
+        total += book.inStock;
+      }
     }
 
     return total;
