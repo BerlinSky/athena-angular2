@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 
 import { BookDataService } from './book-data.service';
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import { BooksComponent } from './books.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavigationComponent,
     BooksComponent
   ],
   imports: [ BrowserModule, FormsModule, HttpModule ],
