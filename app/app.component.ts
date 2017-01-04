@@ -6,6 +6,19 @@ export class Artist {
   webSite: string;
 }
 
+const ARTISTS: Artist[] = [
+  { id: 101, name: 'Carrie Underwood', webSite: "www.artist-site.com" },
+  { id: 102, name: 'U2', webSite: "www.artist-site.com" },
+  { id: 103, name: 'Taylor Swift', webSite: "www.artist-site.com" },
+  { id: 104, name: 'Beyonce', webSite: "www.artist-site.com" },
+  { id: 105, name: 'Adele', webSite: "www.artist-site.com" },
+  { id: 106, name: 'Justin Bieber', webSite: "www.artist-site.com" },
+  { id: 107, name: 'Jennifer Lopez', webSite: "www.artist-site.com" },
+  { id: 108, name: 'Lady Gaga', webSite: "www.artist-site.com" },
+  { id: 109, name: 'Katy Perry', webSite: "www.artist-site.com" },
+  { id: 110, name: 'Madonna', webSite: "www.artist-site.com" }
+];
+
 @Component({
   selector: 'artist-app',
   template: `
@@ -18,10 +31,34 @@ export class Artist {
         Web Site:
         <input [(ngModel)]="artist.webSite" placeholder="webSite">
     </div>
+
+    <ul>
+      <li *ngFor="let artist of artists"
+        (click)="selectArtist(artist)">
+        <span>
+          {{ artist.id }}
+        </span>
+          {{ artist.name }}
+      </li>
+    </ul>
+
+    <div *ngIf="artistSelected" class="artist">
+       Artist: <span>{{ artistSelected.name }}</span>
+       Web Site: <input [(ngModel)]="artistSelected.webSite" placeholder="webSite">
+    </div>
   `,
 })
 export class AppComponent  {
   title = 'New Artist Site';
+
+  artists = ARTISTS;
+  artistSelected: Artist;
+
+  selectArtist(artist: Artist): void {
+    console.log(artist);
+
+    this.artistSelected = artist;
+  }
 
   artist: Artist = {
     id: 101,
