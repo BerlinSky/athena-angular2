@@ -1,5 +1,35 @@
 # Iteration List
 
+## Iteration 03. _Learn two-way binding_
+
+### Branch: the-hero-editor
++ based on base-page-ts 
+
+### Design Goals:
++ Learn how to add ngMogule and two-way binding.
+
+### Developer's Notes
++ How two-way binding works
+
+###Surge: 
+	
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b the-hero-editor [github repository] the-hero-editor
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 02. _An update version of starter project_
 
 ### Branch: starter-page
@@ -15,9 +45,6 @@
 4.  Remove .travis.yml
 5.  Clean up the app folder
 6.  Clean up the package.json
-
-###Surge: 
-	
 
 ### Steps to use the iteration
 1. Clone the project
@@ -45,9 +72,6 @@
 
 ### Developer's Notes
 + A starter project
-
-###Surge: 
-	
 
 ### Steps to use the iteration
 1. Clone the project
