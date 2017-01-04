@@ -1,5 +1,32 @@
 # Iteration List
 
+## Iteration 04. _Learn two-way binding (improved version)_
+
+### Branch: starter-page-2
++ based on starter-page 
+
+### Design Goals:
++ Learn how to add ngMogule and two-way binding.
+
+### Developer's Notes
++ How two-way binding works
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b starter-page-2 [github repository] starter-page-2
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 03. _Learn two-way binding_
 
 ### Branch: the-hero-editor
@@ -10,9 +37,6 @@
 
 ### Developer's Notes
 + How two-way binding works
-
-###Surge: 
-	
 
 ### Steps to use the iteration
 1. Clone the project
