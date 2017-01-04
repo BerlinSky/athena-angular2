@@ -11,16 +11,12 @@ export class Artist {
   template: `
     <h1>Welcome to {{ title }}</h1>
     <h3>Site Link: {{ artist.webSite }}</h3>
-    <div>
-      <span>Artist: </span>{{ artist.name }}
+    <div class="artist">
+      Artist: <span>{{ artist.name }}</span>
     </div>
-    <div>
-      <div>
-        <label>Web Site: </label>
-      </div>
-      <div>
+    <div class="artist">
+        Web Site:
         <input [(ngModel)]="artist.webSite" placeholder="webSite">
-      </div>
     </div>
   `,
 })
