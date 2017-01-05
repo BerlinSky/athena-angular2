@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
-export class Artist {
-  id: number;
-  name: string;
-  webSite: string;
-}
+import { Artist } from './artist';
+
+// export class Artist {
+//   id: number;
+//   name: string;
+//   webSite: string;
+// }
 
 const ARTISTS: Artist[] = [
   { id: 101, name: 'Carrie Underwood', webSite: "www.artist-site.com" },
