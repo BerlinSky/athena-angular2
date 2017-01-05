@@ -20,6 +20,21 @@ const ARTISTS: Artist[] = [
 ];
 
 @Component({
+  styles: [`
+    ul.siteList {
+      color: #737E86;
+    }
+    .siteList > li {
+      margin-bottom: 10px;
+      position: relative;
+      list-style: none;
+      padding-left: 20px;
+      margin-left: 0;
+    }
+     .siteList li.selected {
+      color: tomato;
+    }
+  `],
   selector: 'artist-app',
   template: `
     <h1>Welcome to {{ title }}</h1>
@@ -32,8 +47,9 @@ const ARTISTS: Artist[] = [
         <input [(ngModel)]="artist.webSite" placeholder="webSite">
     </div>
 
-    <ul>
+    <ul class="siteList">
       <li *ngFor="let artist of artists"
+        [class.selected]="artist === artistSelected"
         (click)="selectArtist(artist)">
         <span>
           {{ artist.id }}
