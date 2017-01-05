@@ -60,10 +60,7 @@ const ARTISTS: Artist[] = [
       </li>
     </ul>
 
-    <div *ngIf="artistSelected" class="artist">
-       Artist: <span>{{ artistSelected.name }}</span>
-       Web Site: <input [(ngModel)]="artistSelected.webSite" placeholder="webSite">
-    </div>
+    <artist-detail [artist]="artistSelected"></artist-detail>
   `,
 })
 export class AppComponent  {
