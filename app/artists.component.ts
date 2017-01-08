@@ -19,21 +19,9 @@ import { ArtistService } from './artist.service';
       color: tomato;
     }
   `],
+  moduleId: module.id,
   selector: 'artists',
-  template: `
-    <ul class="siteList">
-      <li *ngFor="let artist of artists"
-        [class.selected]="artist === artistSelected"
-        (click)="selectArtist(artist)">
-        <span>
-          {{ artist.id }}
-        </span>
-          {{ artist.name }}
-      </li>
-    </ul>
-
-    <artist-detail [artist]="artistSelected"></artist-detail>
-  `,
+  templateUrl: "artists.component.html",
   providers: [ArtistService]
 })
 export class ArtistsComponent implements OnInit {
