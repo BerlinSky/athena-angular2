@@ -1,8 +1,37 @@
 # Iteration List
 
+## Iteration 06. _How a parent component communicates with its child_
+
+### Branch: starter-page-3  
++ based on the-hero-editor 
+
+### Design Goals:
++ Learn how the two-way binding works.
++ Learn how to set up a parent-child relationship in Angular2
+
+### Developer's Notes
+1. Learn the relationship between parent and child components.
+2. Learn ngFor, ngIf
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b starter-page-3 [github repository] starter-page-3
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 05. _How the two-way binding work with a child component_
 
-### Branch: master-detail based  
+### Branch: master-detail  
 + based on the-hero-editor 
 
 ### Design Goals:
