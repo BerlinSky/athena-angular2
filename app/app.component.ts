@@ -1,19 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Artist } from './artist';
-
-const ARTISTS: Artist[] = [
-  { id: 101, name: 'Carrie Underwood', webSite: "www.artist-site.com" },
-  { id: 102, name: 'U2', webSite: "www.artist-site.com" },
-  { id: 103, name: 'Taylor Swift', webSite: "www.artist-site.com" },
-  { id: 104, name: 'Beyonce', webSite: "www.artist-site.com" },
-  { id: 105, name: 'Adele', webSite: "www.artist-site.com" },
-  { id: 106, name: 'Justin Bieber', webSite: "www.artist-site.com" },
-  { id: 107, name: 'Jennifer Lopez', webSite: "www.artist-site.com" },
-  { id: 108, name: 'Lady Gaga', webSite: "www.artist-site.com" },
-  { id: 109, name: 'Katy Perry', webSite: "www.artist-site.com" },
-  { id: 110, name: 'Madonna', webSite: "www.artist-site.com" }
-];
+import { ArtistService } from './artist.service';
 
 @Component({
   styles: [`
@@ -56,17 +44,30 @@ const ARTISTS: Artist[] = [
 
     <artist-detail [artist]="artistSelected"></artist-detail>
   `,
+  providers: [ArtistService]
 })
-export class AppComponent  {
+export class AppComponent implements OnInit {
+  constructor(private artistService: ArtistService) { }
+
   title = 'New Artist Site';
 
-  artists = ARTISTS;
+  // artists = ARTISTS;
+  artists: Artist[];
   artistSelected: Artist;
 
+  getArtists(): void {
+    this.artistService.getArtists()
+      .then(artists => this.artists = artists);
+  }
+
   selectArtist(artist: Artist): void {
-    console.log(artist);
+    // console.log(artist);
 
     this.artistSelected = artist;
+  }
+
+  ngOnInit(): void {
+    this.getArtists();
   }
 
   artist: Artist = {
@@ -74,4 +75,5 @@ export class AppComponent  {
     name: "Tokyo Night",
     webSite: "www.tokyonight.com"
   }
+
 }
