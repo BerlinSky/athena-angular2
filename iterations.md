@@ -1,5 +1,32 @@
 # Iteration List
 
+## Iteration 07. _Add CSS to a component_
+
+### Branch: more-starter-page  
++ based on starter-page-3 
+
+### Design Goals:
++ Learn add CSS class to a component
+
+### Developer's Notes
++ Learn how to add CSS class to a component
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b more-starter-page [github repository] more-starter-page
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 06. _How a parent component communicates with its child_
 
 ### Branch: starter-page-3  
