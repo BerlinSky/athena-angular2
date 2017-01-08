@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'artist-portfolio',
-  template: `
-    <h3>Artist Portfolio</h3>
-    <div>{{ title }}</div>
-  `
+  templateUrl: 'portfolio.component.html'
 })
 export class PortfolioComponent {
-  title = "A placeholder for now"
+  title = "The detail is in the html template"
 }
