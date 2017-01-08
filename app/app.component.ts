@@ -6,6 +6,7 @@ import { Artist } from './artist';
   selector: 'artist-app',
   template: `
     <h1>Welcome to {{ title }}</h1>
+
     <h3>Site Link: {{ artist.webSite }}</h3>
     <div class="artist">
       Artist: <span>{{ artist.name }}</span>
@@ -14,6 +15,9 @@ import { Artist } from './artist';
         Web Site:
         <input [(ngModel)]="artist.webSite" placeholder="webSite">
     </div>
+
+    <a routerLink="/artists">Artists</a>
+    <router-outlet></router-outlet>
   `,
 })
 export class AppComponent {
