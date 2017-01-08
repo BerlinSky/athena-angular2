@@ -16,7 +16,13 @@ import { Artist } from './artist';
         <input [(ngModel)]="artist.webSite" placeholder="webSite">
     </div>
 
-    <a routerLink="/artists">Artists</a>
+    <div>
+      <a routerLink="/portfolio">Portfolio</a>
+    </div>
+    <div>
+      <a routerLink="/artists">Artists</a>
+    </div>
+
     <router-outlet></router-outlet>
   `,
 })
