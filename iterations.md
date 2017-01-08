@@ -1,5 +1,59 @@
 # Iteration List
 
+## Iteration 09. _How to break codes logically into separate files (Improved)_
+
+### Branch: more-starter-page-2  
++ based on more-starter-page 
+
+### Design Goals:
++ Break codes into separate files
+
+### Developer's Notes
++ How to break codes logically into separate files / components following the single-responsibility principle
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b more-starter-page-2 [github repository] more-starter-page-2
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
+## Iteration 08. _How to break codes logically into separate files_
+
+### Branch: multiple-components  
++ based on master-detail 
+
+### Design Goals:
++ Break codes into separate files
+
+### Developer's Notes
++ How to break codes logically into separate files / components following the single-responsibility principle
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b multiple-components [github repository] multiple-components
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 07. _Add CSS to a component_
 
 ### Branch: more-starter-page  
