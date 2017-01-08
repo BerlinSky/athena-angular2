@@ -1,5 +1,34 @@
 # Iteration List
 
+## Iteration 05. _How the two-way binding work with a child component_
+
+### Branch: master-detail based  
++ based on the-hero-editor 
+
+### Design Goals:
++ Learn how the two-way binding works.
++ Learn how to set up a parent-child relationship in Angular2
+
+### Developer's Notes
++ Learn how the two-way binding works.
++ Learn how to set up a parent-child relationship in Angular2
+
+### Steps to use the iteration
+1. Clone the project
+  ```
+  git clone -b master-detail [github repository] master-detail
+  ```
+2. Install the NPM packages:
+  ```
+  npm install
+  ```
+3. Start the app by running gulp:
+  ```
+  npm start
+  ```
+
+---
+
 ## Iteration 04. _Learn two-way binding (improved version)_
 
 ### Branch: starter-page-2
