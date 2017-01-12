@@ -1,4 +1,13 @@
 <main>
   <h1>{{title}}</h1>
   <img src="../../public/images/kitten.jpg">
+
+  <h3>Site Link: {{ artist.webSite }}</h3>
+  <div class="artist">
+    Artist: <span>{{ artist.name }}</span>
+  </div>
+  <div class="artist">
+    Web Site:
+    <input [(ngModel)]="artist.webSite" placeholder="webSite">
+  </div>
 </main>
