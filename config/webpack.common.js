@@ -64,7 +64,7 @@ module.exports = {
   ],
 
   postcss: function () {
-    return [precss, autoprefixer({ browsers: ['last 2 versions'] })];
+    return [precss, autoprefixer({ browsers: ['> 5%'] })];
   }
 
 };
