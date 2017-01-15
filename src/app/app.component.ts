@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Artist } from '../artist/artist';
 import { ArtistService } from '../services/artist.service';
 
-import '../../public/css/styles.css';
+// import '../../public/css/styles.scss';
+import '../sass/styles.scss';
 
 @Component({
   selector: 'artist-app',

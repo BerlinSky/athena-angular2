@@ -10,9 +10,7 @@ module.exports = webpackMerge(commonConfig, {
   target: 'web',
   output: {
     path: helpers.root('dist'),
-  //   publicPath: 'http://localhost:8080/',
     ppublicPath: '/',
-    // filename: 'bundle.js'
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },
@@ -24,26 +22,3 @@ module.exports = webpackMerge(commonConfig, {
     stats: 'minimal'
   }
 });
-
-
-// export default {
-//   debug: true,
-//   devtool: 'inline-source-map',
-//   noInfo: false,
-//   entry: [
-//     path.resolve(__dirname, 'src/index')
-//   ],
-//   target: 'web',
-//   output: {
-//     path: path.resolve(__dirname, 'src'),
-//     publicPath: '/',
-//     filename: 'bundle.js'
-//   },
-//   plugins: [],
-//   module: {
-//     loaders: [
-//       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
-//       { test: /\.css$/, loaders: ['style', 'css'] }
-//     ]
-//   }
-// }

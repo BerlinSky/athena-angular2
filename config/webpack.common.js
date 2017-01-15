@@ -2,6 +2,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var precss = require('precss');
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
@@ -37,7 +39,12 @@ module.exports = {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw'
-      }
+      },
+      {
+				test: /\.scss$/,
+				exclude: helpers.root('src', 'app'),
+				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!resolve-url!sass?sourceMap')
+			}
     ]
   },
 
@@ -49,5 +56,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-  ]
+  ],
+
+  postcss: function () {
+    return [precss, autoprefixer({ browsers: ['last 2 versions'] })];
+  }
+
 };
