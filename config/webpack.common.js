@@ -44,6 +44,11 @@ module.exports = {
 				test: /\.scss$/,
 				exclude: helpers.root('src', 'app'),
 				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!resolve-url!sass?sourceMap')
+			},
+      {
+				test: /\.scss$/,
+				include: helpers.root('src', 'app'),
+				loaders: ['exports-loader?module.exports.toString()', 'css', 'postcss', 'sass']
 			}
     ]
   },

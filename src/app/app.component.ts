@@ -9,7 +9,7 @@ import '../sass/styles.scss';
 @Component({
   selector: 'artist-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [ArtistService]
 })
 export class AppComponent implements OnInit {
