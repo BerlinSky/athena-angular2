@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { ArtistComponent } from '../artist/artist.component'
-import { ArtistDetailComponent } from '../artist-detail/artist-detail.component'
+import { ArtistComponent } from '../artist/artist.component';
+import { ArtistDetailComponent } from '../artist-detail/artist-detail.component';
+import { PortfolioComponent } from '../portfolio/Portfolio.component';
 
 @NgModule({
   imports: [
@@ -14,7 +17,8 @@ import { ArtistDetailComponent } from '../artist-detail/artist-detail.component'
   declarations: [
     AppComponent,
     ArtistComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    PortfolioComponent
   ],
   bootstrap: [ AppComponent ]
 })
