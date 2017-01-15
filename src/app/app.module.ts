@@ -12,7 +12,22 @@ import { PortfolioComponent } from '../portfolio/Portfolio.component';
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'artists',
+        component: ArtistComponent
+      },
+      {
+        path: 'portfolio',
+        component: PortfolioComponent
+      },
+      // {
+      //   path: '',
+      //   redirectTo: '/portfolio',
+      //   pathMatch: 'full'
+      // },
+    ])
   ],
   declarations: [
     AppComponent,
