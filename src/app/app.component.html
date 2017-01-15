@@ -1,19 +1,19 @@
-<main>
-  <h1>{{title}}</h1>
-  <img src="../../public/images/kitten.jpg">
+<h1>Welcome to {{ title }}</h1>
 
-  <h3>[Click an artist name to for its site info]</h3>
+<h3>Site Link: {{ artist.webSite }}</h3>
+<div class="artist">
+  Artist: <span>{{ artist.name }}</span>
+</div>
+<div class="artist">
+    Web Site:
+    <input [(ngModel)]="artist.webSite" placeholder="webSite">
+</div>
 
-  <ul>
-    <li *ngFor="let artist of artists"
-      (click)="selectArtist(artist)">
-      <span>
-        {{ artist.id }}
-      </span>
-        {{ artist.name }}
-    </li>
-  </ul>
+<div>
+  <a routerLink="/portfolio">Portfolio</a>
+</div>
+<div>
+  <a routerLink="/artists">Artists</a>
+</div>
 
-  <artist-detail [artist]="artistSelected"></artist-detail>
-
-</main>
+<router-outlet></router-outlet>

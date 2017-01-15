@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
+import { ArtistService } from '../services/artist.service';
+
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -22,11 +24,11 @@ import { PortfolioComponent } from '../portfolio/Portfolio.component';
         path: 'portfolio',
         component: PortfolioComponent
       },
-      // {
-      //   path: '',
-      //   redirectTo: '/portfolio',
-      //   pathMatch: 'full'
-      // },
+      {
+        path: '',
+        redirectTo: '/portfolio',
+        pathMatch: 'full'
+      },
     ])
   ],
   declarations: [
@@ -34,6 +36,9 @@ import { PortfolioComponent } from '../portfolio/Portfolio.component';
     ArtistComponent,
     ArtistDetailComponent,
     PortfolioComponent
+  ],
+  providers: [
+    ArtistService
   ],
   bootstrap: [ AppComponent ]
 })
