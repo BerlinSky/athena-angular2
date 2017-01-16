@@ -15,6 +15,10 @@ const routes: Routes = [
     component: PortfolioComponent
   },
   {
+    path: 'artist/:id',
+    component: ArtistDetailComponent
+  },
+  {
     path: '',
     redirectTo: '/portfolio',
     pathMatch: 'full'
