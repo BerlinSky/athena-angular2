@@ -1,8 +1,12 @@
 <main>
   <h1>{{title}}</h1>
-  <img src="../../public/images/kitten.jpg">
 
-  <h3>[Click an artist name to for its site info]</h3>
+  <div class="imageFrame">
+    <div class="imageFrame__imageWrapper">
+      <img src="../../public/images/faceless-artist.jpg">
+    </div>
+    <p class="imageFrame__caption">Click an artist name for the site info</p>
+  </div>
 
   <ul>
     <li *ngFor="let artist of artists"

@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Artist } from '../artist/artist';
 import { ArtistService } from '../services/artist.service';
 
-// import '../../public/css/styles.scss';
 import '../sass/styles.scss';
 
 @Component({
@@ -15,7 +14,7 @@ import '../sass/styles.scss';
 export class AppComponent implements OnInit {
   constructor(private artistService: ArtistService) {}
 
-  title = 'Artist Sites';
+  title = 'A Site for Artists';
 
   // artists = ARTISTS;
   artists: Artist[];
