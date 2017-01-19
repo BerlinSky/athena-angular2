@@ -3,9 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Artist } from './artist';
 import { ArtistService } from '../services/artist.service';
 
-// import '../../public/css/styles.scss';
-// import '../sass/styles.scss';
-
 @Component({
   selector: 'artist-app',
   templateUrl: './artist.component.html',
@@ -13,8 +10,6 @@ import { ArtistService } from '../services/artist.service';
 })
 export class ArtistComponent implements OnInit {
   constructor(private artistService: ArtistService) {}
-
-  title = 'Artist Sites';
 
   // artists = ARTISTS;
   artists: Artist[];
