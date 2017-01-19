@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Artist } from '../artist/artist';
 
-import '../sass/styles.scss';
+import '../sass/main.scss';
 
 @Component({
   selector: 'artist-app',

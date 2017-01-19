@@ -1,19 +1,48 @@
-<h1>Welcome to {{ title }}</h1>
+<div class="l-pageContainer pageContainer">
+  <div class="l-pageHeader pageHeader">
+        <div class="l-navContainer navContainer">
+          <div class="l-logoContainer logoContainer">
+            <!--<div class="imageFrame"><img alt="img" src="./images/site-logo.png" class="imageResponsive"></div>-->
+          </div>
+          <div class="l-toggleMenuContainer toggleMenuContainer"><a href="#" class="js-toggleMobileMenu"><i class="fa fa-bars fa-2x"></i></a></div>
+        </div>
+        <div class="l-menuWrapper menuWrapper js-menuWrapper">
+          <div class="l-menuContainer menuContainer js-mobileMenuContainer">
+            <ul class="menuList">
+              <li class="menuItem"><a href="#"><span>Home</span></a></li>
+              <li class="menuItem"><a href="#" class="currentSelection"><span>Color Palette</span></a></li>
+              <li class="menuItem"><a href="#"><span>Typography</span></a></li>
+              <li class="menuItem"><a href="#"><span>Text Styles</span></a></li>
+              <li class="menuItem"><a href="#"><span>Breakpoints</span></a></li>
+              <li class="menuItem"><a href="#"><span>Buttons</span></a></li>
+            </ul>
+          </div>
+          <div class="l-searchContainer searchContainer js-showSearchPanel"><a class="searchButton searchButton--default"><i class="fa fa-search"></i></a></div>
+          <div class="l-searchWrapper searchWrapper js-searchPanel">
+            <form action="#" method="post" class="l-searchWrapper__form"><a class="searchButton searchButton--whiteSquare"><i class="fa fa-search"></i></a>
+              <input type="text" name="s" placeholder="Enter your search" class="searchInput"><a class="closeButton closeButton--dimmedSquare js-hideSearchPanel"><i class="fa fa-close"></i></a>
+            </form>
+          </div>
+        </div>
+      </div>
+  <!--<h1>Welcome to {{ title }}</h1>-->
 
-<h3>Site Link: {{ artist.webSite }}</h3>
-<div class="artist">
-  Artist: <span>{{ artist.name }}</span>
-</div>
-<div class="artist">
-    Web Site:
-    <input [(ngModel)]="artist.webSite" placeholder="webSite">
-</div>
+  <!--<h3>Site Link: {{ artist.webSite }}</h3>-->
+  <div class="artist">
+    Artist: <span>{{ artist.name }}</span>
+  </div>
+  <div class="artist">
+      Web Site:
+      <input [(ngModel)]="artist.webSite" placeholder="webSite">
+  </div>
 
-<div>
-  <a routerLink="/portfolio">Portfolio</a>
-</div>
-<div>
-  <a routerLink="/artists">Artists</a>
-</div>
+  <div>
+    <a routerLink="/portfolio">Portfolio</a>
+  </div>
+  <div>
+    <a routerLink="/artists">Artists</a>
+  </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+</div>
