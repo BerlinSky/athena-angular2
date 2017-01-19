@@ -1,15 +1,6 @@
-main {
-  margin: 0;
-  padding: 1em 0;
-
-  text-align: center;
-  display: block;
-
-  background-color: rgb(255, 216, 0);
-
+.artistMainContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   .imageFrame {

@@ -1,8 +1,8 @@
-<!--<main>-->
+<div class="artistMainContent">
 
   <h3>[Click an artist name to for its site info]</h3>
 
-  <ul>
+  <ul class="siteList">
     <li *ngFor="let artist of artists"
       (click)="selectArtist(artist)">
       <span>
@@ -14,4 +14,4 @@
 
   <artist-detail [artist]="artistSelected"></artist-detail>
 
-<!--</main>-->
+</div>
