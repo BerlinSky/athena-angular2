@@ -11,7 +11,6 @@ import { ArtistService } from '../services/artist.service';
 export class ArtistComponent implements OnInit {
   constructor(private artistService: ArtistService) {}
 
-  // artists = ARTISTS;
   artists: Artist[];
   artistSelected: Artist;
 
