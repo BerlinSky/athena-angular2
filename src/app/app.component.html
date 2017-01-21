@@ -1,19 +1,44 @@
-<h1>Welcome to {{ title }}</h1>
+<div class="l-pageContainer l-fixed-header pageContainer">
+  <div class="l-pageHeader pageHeader">
+    <div class="l-navContainer navContainer">
+      <div class="l-logoContainer logoContainer"></div>
+    </div>
+    <div class="l-menuWrapper menuWrapper">
+      <div class="l-menuContainer menuContainer">
+        <ul class="menuList">
+          <li class="menuItem"><a href="#"><span>Artists</span></a></li>
+          <li class="menuItem"><a href="#"><span>Portfolio</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="l-pageContentWrapper pageContentWrapper">
 
-<h3>Site Link: {{ artist.webSite }}</h3>
-<div class="artist">
-  Artist: <span>{{ artist.name }}</span>
-</div>
-<div class="artist">
-    Web Site:
-    <input [(ngModel)]="artist.webSite" placeholder="webSite">
-</div>
+    <div class="l-contentContainer contentContainer">
+      <h1>Welcome to {{ title }}</h1>
 
-<div>
-  <a routerLink="/portfolio" routerLinkActive="activeLink">Portfolio</a>
-</div>
-<div>
-  <a routerLink="/artists" routerLinkActive="activeLink">Artists</a>
-</div>
+      <h3>Site Link: {{ artist.webSite }}</h3>
+      <div class="artist">
+        Artist: <span>{{ artist.name }}</span>
+      </div>
+      <div class="artist">
+          Web Site:
+          <input [(ngModel)]="artist.webSite" placeholder="webSite">
+      </div>
 
-<router-outlet></router-outlet>
+      <div>
+        <a routerLink="/portfolio" routerLinkActive="activeLink">Portfolio</a>
+      </div>
+      <div>
+        <a routerLink="/artists" routerLinkActive="activeLink">Artists</a>
+      </div>
+
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="l-contentFooterContainer contentFooterContainer">
+      <div><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dolore</span></div>
+    </div>
+
+  </div>
+</div>
