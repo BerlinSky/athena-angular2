@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Artist } from './artist';
 import { ArtistService } from '../services/artist.service';
@@ -12,7 +13,10 @@ import { ArtistService } from '../services/artist.service';
   // styleUrls: ['./artist.component.scss']
 })
 export class ArtistComponent implements OnInit {
-  constructor(private artistService: ArtistService) {}
+  constructor(
+    private artistService: ArtistService,
+    private router: Router
+  ) {}
 
   title = 'Artist Sites';
 
@@ -29,6 +33,10 @@ export class ArtistComponent implements OnInit {
     console.log(artist);
 
     this.artistSelected = artist;
+  }
+
+  displayArtistInfo(): void {
+    this.router.navigate(['/artist', this.artistSelected.id]);
   }
 
   ngOnInit(): void {
