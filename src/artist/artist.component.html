@@ -1,5 +1,4 @@
 <main>
-  <h1>{{title}}</h1>
   <img src="../../public/images/kitten.jpg">
 
   <h3>[Click an artist name to for its site info]</h3>
@@ -14,6 +13,11 @@
     </li>
   </ul>
 
-  <artist-detail [artist]="artistSelected"></artist-detail>
+  <div *ngIf="artistSelected">
+    <div>
+      <span>Current Artist: </span> {{ artistSelected.name }}
+    </div>
 
+    <button (click)="displbuttonyArtistInfo()">Display Artist Info</button>
+  </div>
 </main>
