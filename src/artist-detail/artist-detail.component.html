@@ -1,6 +1,17 @@
-<div *ngIf="artist" class="artist">
-  Artist: <span>{{ artist.name }}</span>
-  Web Site: <input [(ngModel)]="artist.webSite" placeholder="webSite">
-
-  <button (click)="navigateBack()">Back</button>
+ <div *ngIf="artist" class="artistDetailContainer">
+  <div class="artistBlock artistBlock__detail">
+    <div class="imageContainer">
+      <div class="imageFrame"><img src="../../public/images/artist-orange.png"/>
+      </div>
+    </div>
+    <div class="artistBlock__title">
+     {{ artist.id }} <span> [ {{ artist.name }} ]</span>
+    </div>
+    <div class="artistBlock__desc">
+      {{ artist.webSite }}
+    </div>
+    <div class="currentArtistContainer">
+      <a class="infoButton" (click)="navigateBack()">Go Back</a>
+    </div>
+  </div>
 </div>
