@@ -8,21 +8,25 @@ import { Artist } from '../artist/artist';
 @Injectable()
 export class ArtistService {
 
-  private artistUrl = 'api/artists';
+  private artistsUrl = 'api/artists';
 
   constructor(private http: Http) { }
 
   getArtists(): Promise<Artist[]> {
     // return Promise.resolve(ARTISTS);
-    return this.http.get(this.artistUrl)
+    return this.http.get(this.artistsUrl)
                 .toPromise()
                 .then(response => response.json().data as Artist[])
                 .catch(this.processError);
   }
 
   getArtist(id: number): Promise<Artist> {
-    return this.getArtists()
-      .then(artists => artists.find(artist => artist.id === id));
+    const artistUrl = `${this.artistsUrl}/${id}`;
+
+    return this.http.get(artistUrl)
+                .toPromise()
+                .then(response => response.json().data as Artist)
+                .catch(this.processError);
   }
 
   private processError(error: any): Promise<any> {
