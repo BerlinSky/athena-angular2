@@ -1,9 +1,34 @@
-<main>
-  <img src="../../public/images/kitten.jpg">
+<div *ngIf="artistSelected" class="currentArtistContainer">
+  <div class="info">
+    <span>Current Artist: </span> {{ artistSelected.name }}
+  </div>
+  <a class="infoButton" (click)="displayArtistInfo()">Display Info</a>
+</div>
 
-  <h3>[Click an artist name to for its site info]</h3>
+<div class="artistContainer">
+  <div *ngFor="let artist of artists"
+      class="artistBlock">
+    <div class="imageContainer">
+      <div class="imageFrame">
+        <img src="../../public/images/icon-muffin.png"/>
+      </div>
+    </div>
+    <div class="artistBlock__title">{{ artist.id }}</div>
+    <div class="artistBlock__desc">
+      <a (click)="selectArtist(artist)">
+        {{ artist.name }}
+      </a>
+    </div>
+  </div>
+</div>
 
-  <ul>
+      <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--<main>-->
+  <!--<img src="../../public/images/kitten.jpg">
+
+  <h3>[Click an artist name to for its site info]</h3>-->
+
+  <!--<ul>
     <li *ngFor="let artist of artists"
       (click)="selectArtist(artist)">
       <span>
@@ -11,13 +36,13 @@
       </span>
         {{ artist.name }}
     </li>
-  </ul>
+  </ul>-->
 
-  <div *ngIf="artistSelected">
+  <!--<div *ngIf="artistSelected">
     <div>
       <span>Current Artist: </span> {{ artistSelected.name }}
     </div>
 
     <button (click)="displayArtistInfo()">Display Artist Info</button>
-  </div>
-</main>
+  </div>-->
+<!--</main>-->
