@@ -27,5 +27,8 @@
         {{ artist.name }}
       </a>
     </div>
+
+    <a class="infoButton" (click)="removeArtist(artist); $event.stopPropagation()">remove me</a>
+
   </div>
 </div>

@@ -50,6 +50,16 @@ export class ArtistService {
       .catch(this.processError);
   }
 
+  deleteArtist(id: number): Promise<void> {
+    const headers = new Headers({'Content-Type': 'application/json'});
+    const artistUrl = `${this.artistsUrl}/${id}`;
+
+    return this.http.delete(artistUrl, {headers: headers})
+      .toPromise()
+      .then(() => null)
+      .catch(this.processError);
+  }
+
   private processError(error: any): Promise<any> {
     console.error('An error occured', error);
     return Promise.reject(error.message || error);
