@@ -29,6 +29,17 @@ export class ArtistComponent implements OnInit {
       .then(artists => this.artists = artists);
   }
 
+  addArtist(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+
+    this.artistService.createArtist(name)
+      .then(artist => {
+        this.artists.push(artist);
+        this.artistSelected = null;
+      });
+  }
+
   selectArtist(artist: Artist): void {
     console.log(artist);
 

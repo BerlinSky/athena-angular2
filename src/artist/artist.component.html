@@ -1,3 +1,11 @@
+<div>
+  <label>Artist name:</label>
+  <input #artistName />
+  <button (click)="addArtist(artistName.value); artistName.value=''">
+    Add
+  </button>
+</div>
+
 <div *ngIf="artistSelected" class="currentArtistContainer">
   <div class="info">
     <span>Current Artist: </span> {{ artistSelected.name }}
