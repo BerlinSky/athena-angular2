@@ -10,8 +10,12 @@
     <div class="artistBlock__desc">
       {{ artist.webSite }}
     </div>
+    <div class="artistBlock__desc">
+      <input [(ngModel)]="artist.webSite" placeholder="webSite" />
+    </div>
     <div class="currentArtistContainer">
       <a class="infoButton" (click)="navigateBack()">Go Back</a>
+      <a class="infoButton" (click)="saveArtist()">Save</a>
     </div>
   </div>
 </div>

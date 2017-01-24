@@ -18,6 +18,8 @@ export class ArtistDetailComponent implements OnInit {
     private location: Location
   ) {}
 
+  @Input() artist: Artist;
+
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.artistService.getArtist(+params['id']))
@@ -28,6 +30,9 @@ export class ArtistDetailComponent implements OnInit {
     this.location.back();
   }
 
-  @Input() artist: Artist;
+  saveArtist(): void {
+    this.artistService.editArtist(this.artist)
+      .then(() => this.navigateBack());
+  }
 
 }

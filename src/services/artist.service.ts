@@ -29,6 +29,17 @@ export class ArtistService {
                 .catch(this.processError);
   }
 
+  editArtist(artist: Artist): Promise<Artist> {
+    const headers = new Headers({'Content-Type': 'application/json'});
+    const artistUrl = `${this.artistsUrl}/${artist.id}`;
+
+    return this.http
+      .put(artistUrl, JSON.stringify(artist), {headers: headers})
+      .toPromise()
+      .then(() => artist)
+      .catch(this.processError);
+  }
+
   private processError(error: any): Promise<any> {
     console.error('An error occured', error);
     return Promise.reject(error.message || error);
