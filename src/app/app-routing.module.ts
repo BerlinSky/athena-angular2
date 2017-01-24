@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ArtistComponent } from '../artist/artist.component';
 import { ArtistDetailComponent } from '../artist-detail/artist-detail.component';
-import { PortfolioComponent } from '../portfolio/Portfolio.component';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 const routes: Routes = [
   {
