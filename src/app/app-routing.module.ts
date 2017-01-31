@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArtistComponent } from '../artist/artist.component';
 import { ArtistDetailComponent } from '../artist-detail/artist-detail.component';
 import { PortfolioComponent } from '../portfolio/Portfolio.component';
+import { Page404Component } from '../page404/Page404.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/portfolio',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: Page404Component
   }
 ];
 

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ArtistComponent } from '../artist/artist.component';
 import { ArtistDetailComponent } from '../artist-detail/artist-detail.component';
 import { PortfolioComponent } from '../portfolio/Portfolio.component';
+import { Page404Component } from '../page404/Page404.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -21,7 +22,8 @@ import { AppRoutingModule }     from './app-routing.module';
     AppComponent,
     ArtistComponent,
     ArtistDetailComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    Page404Component
   ],
   providers: [
     ArtistService
