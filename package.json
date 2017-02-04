@@ -4,7 +4,8 @@
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "security-check": "nsp check"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +37,7 @@
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
     "node-sass": "^4.3.0",
+    "nsp": "^2.6.2",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "postcss-loader": "^1.2.2",
